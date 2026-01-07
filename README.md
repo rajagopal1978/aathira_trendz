@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aathira Trendz - E-Commerce Website
+
+A beautiful, modern e-commerce website for ethnic wear built with Next.js 15, TypeScript, and Tailwind CSS. Inspired by premium silk saree retailers, this website features a stunning design with smooth animations and a responsive layout.
+
+## Features
+
+- **Modern Design**: Beautiful gradient colors (purple to orange) with smooth animations
+- **Responsive Layout**: Optimized for mobile, tablet, and desktop devices
+- **Hero Carousel**: Auto-rotating banner with smooth transitions
+- **Product Grid**: Stunning product cards with hover effects
+- **Category Sections**: Organized shopping by categories
+- **Features Section**: Highlighting key services (shipping, support, returns)
+- **Newsletter Subscription**: Integrated newsletter signup
+- **Sticky Navigation**: Easy-to-use navigation with search functionality
+- **Icons**: Beautiful Lucide React icons throughout
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Images**: Next.js Image Optimization
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+aathira-trendz/
+├── app/
+│   ├── globals.css          # Global styles and animations
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Homepage
+├── components/
+│   ├── Header.tsx           # Navigation header with search
+│   ├── Hero.tsx             # Auto-rotating hero carousel
+│   ├── CategorySection.tsx  # Product categories grid
+│   ├── ProductGrid.tsx      # Featured products display
+│   ├── Features.tsx         # Service features section
+│   └── Footer.tsx           # Footer with links and newsletter
+├── public/
+│   └── images/              # Product and banner images
+└── README.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Color Scheme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Primary Purple**: #3F4293 (Deep Blue Purple)
+- **Primary Orange**: #ee5330 (Coral Orange)
+- **Gradients**: Purple to Orange, Purple to Blue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+### Update Colors
+Edit the color values in the component files or add custom colors to your Tailwind config.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Add More Products
+Edit the `products` array in `components/ProductGrid.tsx` to add your own products.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Change Categories
+Modify the `categories` array in `components/CategorySection.tsx` to update categories.
+
+### Update Contact Info
+Edit the contact details in `components/Footer.tsx` and `components/Header.tsx`.
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Deploy
+
+This website can be easily deployed to:
+- Vercel (recommended for Next.js)
+- Netlify
+- AWS
+- Any hosting platform that supports Node.js
+
+## License
+
+This project is open source and available for personal and commercial use.
+
+## Credits
+
+Design inspired by premium Indian ethnic wear retailers. Built with modern web technologies for optimal performance and user experience.
