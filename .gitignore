@@ -61,3 +61,10 @@ logs
 # Temporary files
 *.tmp
 .cache/
+
+# GCP Credentials - NEVER COMMIT
+automation/config/gcp-credentials.json
+automation/config/*.json
+**/gcp-credentials.json
+*.pem
+*.key

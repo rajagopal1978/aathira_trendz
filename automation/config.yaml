@@ -1,0 +1,42 @@
+# GCP Configuration
+gcp:
+  project_id: "jvl-tech-medai"
+  region: "us-central1"
+  zone: "us-central1-a"
+  credentials_path: "./config/gcp-credentials.json"
+
+# Compute Engine Instance Configuration
+instance:
+  name: "instance-chem-info-web"
+  machine_type: "e2-medium"
+  boot_disk_size: 30
+  boot_disk_type: "pd-standard"
+  image_family: "ubuntu-2204-lts"
+  image_project: "ubuntu-os-cloud"
+
+# Application Configuration
+application:
+  name: "aathira-trendz"
+  github_repo: "https://github.com/rajagopal1978/aathira_trendz.git"
+  branch: "main"
+  port: 3000
+
+# Deployment Configuration
+deployment:
+  install_nodejs: true
+  nodejs_version: "20.x"
+  install_nginx: true
+  setup_ssl: false
+  domain: ""
+
+# Firewall Rules
+firewall:
+  - name: "allow-http"
+    port: 80
+    protocol: "tcp"
+  - name: "allow-https"
+    port: 443
+    protocol: "tcp"
+  - name: "allow-nextjs"
+    port: 3000
+    protocol: "tcp"
