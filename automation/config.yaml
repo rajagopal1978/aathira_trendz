@@ -2,7 +2,7 @@
 gcp:
   project_id: "jvl-tech-medai"
   region: "us-central1"
-  zone: "us-central1-a"
+  zone: "us-central1-f"
   credentials_path: "./config/gcp-credentials.json"
 
 # Compute Engine Instance Configuration
