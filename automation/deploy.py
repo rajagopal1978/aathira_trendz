@@ -39,10 +39,21 @@ class GCPDeployment:
             return yaml.safe_load(f)
 
     def load_credentials(self):
-        """Load GCP service account credentials"""
+        """Load GCP service account credentials with required scopes"""
         creds_path = self.config['gcp']['credentials_path']
         logger.info(f"Loading GCP credentials from {creds_path}")
-        return service_account.Credentials.from_service_account_file(creds_path)
+
+        # Add required scopes for Compute Engine
+        scopes = [
+            'https://www.googleapis.com/auth/compute',
+            'https://www.googleapis.com/auth/cloud-platform'
+        ]
+
+        credentials = service_account.Credentials.from_service_account_file(
+            creds_path,
+            scopes=scopes
+        )
+        return credentials
 
     def create_instance(self):
         """Create a new Compute Engine instance"""
